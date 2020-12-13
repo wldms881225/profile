@@ -54,10 +54,17 @@ a {
 /* RESET CSS */
 
 /* COMMON AREA */
+html {
+    scroll-behavior: smooth;
+    font-size: 20px;
+}
 .container {
     width: 1200px;
     margin: 0 auto;
     position: relative;
+}
+b {
+    font-weight: bold;
 }
 /* COMMON AREA */
 
@@ -66,6 +73,7 @@ a {
     position: fixed;
     width: 100%;
     height: 100%;
+    z-index: 999;
 }
 #header #check {
     display: none;
@@ -75,6 +83,7 @@ a {
     right: 10px;
     font-size: 40px;
     transition: opacity 1s;
+    cursor: pointer;
 }
 #header .hide {
     opacity: 1;
@@ -131,3 +140,140 @@ a {
     transform: translateY(-50%);
 }
 /* MAIN AREA */
+
+/* INTRO AREA  */
+#intro {
+    padding: 5rem 0;
+}
+#intro h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #8eba80;
+    margin-bottom: 5rem;
+}
+#intro .container {
+    display: flex;
+    justify-content: space-between;
+}
+#intro .container .intro-cont {
+    width: 350px;
+}
+#intro .container .intro-cont .intro-img {
+    width: 80%;
+    padding-top: 80%;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 5px solid #8eba80;
+    background-color: gray;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#intro .container .intro-cont p {
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+    letter-spacing: -1px;
+}
+#intro .container .cont01 .intro-img {
+    background-image: url(image/IMG_2606.jpg);
+}
+#intro .container .cont02 .intro-img {
+    background-image: url(image/IMG_2589.jpg);
+}
+#intro .container .cont03 .intro-img {
+    background-image: url(image/IMG_2524.jpg);
+}
+/* INTRO AREA  */
+
+/* INFO AREA */
+#info {
+    padding: 5rem 0;
+    background: #8eba80;
+}
+#info h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 5rem;
+}
+#info .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#info #map {
+    width: 40%;
+    margin-right: 3rem;
+}
+#info #map iframe {
+    width: 100%;
+    height: 20rem;
+}
+#info .info-txt p{
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    color: #fff;
+}
+#info .info-txt p i {
+    margin-right: 1rem;
+}
+/* INFO AREA */
+
+/* MEDIA QUERY 1200PX 이하 */
+@media (max-width: 1200px) {
+    /* COMMON AREA */
+    html {
+        font-size: 14px;
+    }
+    .container {
+        width: 100%;
+    }
+    /* COMMON AREA */
+
+    /* MAIN AREA */
+    #main h2 {
+        font-size: 4rem;
+    }
+    /* MAIN AREA */
+
+    /* INTRO AREA  */
+    #intro h3 {
+        font-size: 2rem;
+    }
+    #intro .container {
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+    }
+    #intro .container .intro-cont {
+        width: 100%;
+    }
+    #intro .container .intro-cont .intro-img {
+        width: 60%;
+        padding-top: 60%;        
+    }
+    /* INTRO AREA  */
+
+    /* INFO AREA */
+    #info h3 {
+        font-size: 2rem;
+    }
+    #info .container {
+        display: block;
+    }
+    #info #map {
+        width: 80%;
+        margin: 0 auto 4rem;
+    }
+    #info #map iframe {
+        height: 18rem;
+    }
+    #info .info-txt p{
+        text-align: center;
+    }
+    /* INFO AREA */
+
+}
