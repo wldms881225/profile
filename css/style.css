@@ -82,6 +82,7 @@ b {
     position: absolute;
     right: 10px;
     font-size: 40px;
+    color: #fff;
     transition: opacity 1s;
     cursor: pointer;
 }
@@ -110,14 +111,32 @@ b {
     left: 0%;
 }
 #header nav ul {
-    padding: 20px;
+    padding: 10%;
 }
 #header nav ul li {
-    margin: 40px 0;
+    margin: 4rem 0;
+    position: relative;
 }
 #header nav ul li a {
-    font-size:  4rem;
-    color: #333;
+    font-size:  2rem;
+    font-weight: bold;
+    color: #8eba80;
+    display: block;
+    transition: color 1s;
+}
+#header nav ul li a:hover {
+    color: #FF8235;
+}
+#header nav ul li span {
+    display: block;
+    width: 0%;
+    height: 0.2rem;
+    background-color: #FF8235;
+    position: absolute;
+    transition: width 1s;
+}
+#header nav ul li a:hover ~ span {
+    width: 100%;
 }
 /* HEADER AREA */
 
@@ -239,6 +258,11 @@ b {
         font-size: 4rem;
     }
     /* MAIN AREA */
+
+    #header nav {
+        width: 70%;
+        left: -80%;
+    }
 
     /* INTRO AREA  */
     #intro h3 {
