@@ -62,7 +62,9 @@
         <section id="info">
             <h3>Information</h3>
             <div class="container">
-                <div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5957.13500661367!2d126.93609090177554!3d37.55449120935899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4916c3cc69cb6c2f!2z7ZWY7J2066-465SU7Ja07Lu07ZOo7YSw7ZWZ7JuQ7Iug7LSM7KCQ!5e0!3m2!1sen!2skr!4v1607829878719!5m2!1sen!2skr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+                <div id="map">
+                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5957.13500661367!2d126.93609090177554!3d37.55449120935899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4916c3cc69cb6c2f!2z7ZWY7J2066-465SU7Ja07Lu07ZOo7YSw7ZWZ7JuQ7Iug7LSM7KCQ!5e0!3m2!1sen!2skr!4v1607829878719!5m2!1sen!2skr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+                </div>
                 <div class="info-txt">
                     <p><i class="xi-home-o"></i>서울특별시 마포구 신촌</p>
                     <p><i class="xi-mail-o"></i>ddkfkk@gmail.com</p>
@@ -72,5 +74,30 @@
         </section>
         <!-- info -->
     </div>
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c2ddb09c2ad68f9a9d858a661f443f2a"></script>
+    <script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+            center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    // 마커가 표시될 위치입니다 
+    var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+
+    // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+    // marker.setMap(null);  
+    </script>
 </body>
 </html>
